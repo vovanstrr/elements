@@ -39,10 +39,14 @@ circles[0].style.backgroundColor = 'red';
 // for (let i = 0; i < hearts.length; i++) {      //   перебор всех элементов превдо массива 
 //     hearts[i].style.backgroundColor = 'blue'; 
 // }
-hearts.forEach (item => {
-    item.style.backgroundColor = 'blue'; 
+hearts.forEach (item => {                //в метод forEach передаем в качетсве аргумента collback функцию. (item элемент )
+    item.style.backgroundColor = 'blue'; // изменяем backgroundColor для всех элементов класса hearts
 })
 
-const div = document.createElement('div');
-div.classList.add('black');
-document.body.append(div);
+const div = document.createElement('div'); //Элемент создан и находиться внутри JavaScript, он не отображаться на странице div - название тега 
+const test = document.createTextNode('ля ля ля');    //элементы без оболочкм тега
+
+div.classList.add('black');  // добавление стиля black
+
+//document.body.append(div);   // добавляем в тег body, тег div в самый конец. 
+document.querySelector('.wrapper').append(div);
