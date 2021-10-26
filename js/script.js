@@ -43,10 +43,20 @@ hearts.forEach (item => {                //в метод forEach передае�
     item.style.backgroundColor = 'blue'; // изменяем backgroundColor для всех элементов класса hearts
 })
 
-const div = document.createElement('div'); //Элемент создан и находиться внутри JavaScript, он не отображаться на странице div - название тега 
-const test = document.createTextNode('ля ля ля');    //элементы без оболочкм тега
+const div = document.createElement('div'), //Элемент создан и находиться внутри JavaScript, он не отображаться на странице div - название тега 
+      test = document.createTextNode('ля ля ля'),    //элементы без оболочкм тега
+      wrapper = document.querySelector('.wrapper');
+      
 
 div.classList.add('black');  // добавление стиля black
 
-//document.body.append(div);   // добавляем в тег body, тег div в самый конец. 
-document.querySelector('.wrapper').append(div);
+document.body.append(div);   // добавляем в тег body, тег div в самый конец. 
+//document.querySelector('.wrapper').append(div);   //Получаем элемент с классом wrapper и сразу добавляем туда элемент div
+//wrapper.prepend(div);   //Вставляет тег в начало родительского элемента
+//hearts[0].before(div);  // расположить перед
+//hearts[0].after(div);  // расположить после
+
+// circles[0].remove();  // удаление элемента
+
+//hearts[0].replaceWith(circles[0]);  //замена элемента
+
